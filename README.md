@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Kanban Todo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive Kanban-style Todo application built with React and Tailwind CSS. This app allows users to manage tasks across different stages (New, Ongoing, Done), set due dates, and interact with tasks using a context menu. Tasks are persisted in the browser's local storage.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Kanban Board:** Organize tasks into New, Ongoing, and Done columns.
+- **Add & Edit Tasks:** Quickly add new tasks with a title and description.
+- **Drag-Free Status Management:** Move tasks between columns using a context menu.
+- **Due Dates:** Assign and edit due dates for ongoing tasks, with overdue indication.
+- **Persistent Storage:** Tasks are saved in local storage for data persistence.
+- **Responsive Design:** Fully responsive layout using Tailwind CSS.
+- **Accessible UI:** Keyboard and screen reader friendly.
+- **Testing:** Includes basic tests with React Testing Library and Jest.
 
-### `npm start`
+## Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*(Add screenshots here if available)*
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node.js](https://nodejs.org/) (v14 or higher recommended)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/your-username/kanban-todo-app.git
+   cd kanban-todo-app
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Start the development server:**
+   ```sh
+   npm start
+   ```
+   The app will be available at [http://localhost:3000](http://localhost:3000).
 
-### `npm run eject`
+### Build for Production
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To create an optimized production build:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+npm run build
+```
+The build output will be in the `build/` directory.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Running Tests
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To run the test suite:
 
-## Learn More
+```sh
+npm test
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+.
+├── public/                 # Static assets and HTML template
+├── src/                    # Source code
+│   ├── components/         # React components (Column, TodoCard, ContextMenu)
+│   ├── context/            # React Context for global state (TodoContext)
+│   ├── App.js              # Main app component
+│   ├── index.js            # Entry point
+│   └── ...                 # Styles, tests, etc.
+├── tailwind.config.js      # Tailwind CSS configuration
+├── postcss.config.js       # PostCSS configuration
+├── package.json            # Project metadata and scripts
+└── README.md               # Project documentation
+```
 
-### Code Splitting
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [date-fns](https://date-fns.org/) (for date formatting)
+- [Jest](https://jestjs.io/) & [React Testing Library](https://testing-library.com/)
 
-### Analyzing the Bundle Size
+## Customization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Task Status Flow:** Tasks can only move to "Done" from "Ongoing" and cannot move back from "Done" to "Ongoing".
+- **Due Dates:** Only "Ongoing" tasks can have due dates. Overdue tasks are visually indicated.
+- **Context Menu:** Right-click or use the 3-dot menu on a task to change its status.
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions are welcome! Please open issues or submit pull requests for improvements or bug fixes.
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
-### Deployment
+## Acknowledgements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Create React App](https://create-react-app.dev/)
+-
