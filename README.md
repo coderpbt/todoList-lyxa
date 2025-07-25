@@ -13,9 +13,6 @@ A modern, responsive Kanban-style Todo application built with React and Tailwind
 - **Accessible UI:** Keyboard and screen reader friendly.
 - **Testing:** Includes basic tests with React Testing Library and Jest.
 
-## Screenshots
-
-*(Add screenshots here if available)*
 
 ## Getting Started
 
